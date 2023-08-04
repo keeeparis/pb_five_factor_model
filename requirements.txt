@@ -1,0 +1,9 @@
+peewee==3.16.2
+python-decouple==3.8
+python-telegram-bot==20.4
+pymysql==1.1.0
+cryptography==41.0.1
+plotly==5.15.0
+kaleido==0.2.1
+pandas==2.0.3
+numpy==1.23.1
