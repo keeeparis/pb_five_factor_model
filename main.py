@@ -53,7 +53,7 @@ def main() -> None:
   conv_handler = ConversationHandler(
     entry_points=[CommandHandler("start", start_command), CommandHandler("attempt", attempt_command)],
     states={
-      BEGIN: [MessageHandler(filters.Regex("^Начать$"), begin_command)],
+      BEGIN: [MessageHandler(filters.Regex("^(Начать | да | Да)$"), begin_command)],
       **questions_states(),
     },
     fallbacks=[

@@ -200,8 +200,10 @@ async def attempt_command(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
 
   db.close()
   
-  global all_questions_generator
-  all_questions_generator = generator(ALL_SORTED_QUESTIONS) 
+  # global all_questions_generator
+  # all_questions_generator = generator(ALL_SORTED_QUESTIONS) 
+  
+  context.user_data['generator'] = generator(ALL_SORTED_QUESTIONS) 
   
   await update.message.reply_text(
     "Начать выполнение теста?", 
