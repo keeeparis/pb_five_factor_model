@@ -45,6 +45,8 @@ def questions_states():
   
   return states_dict
 
+BEGIN = 0
+
 def main() -> None:
   """Start the bot."""
   # Create the Application and pass it your bot's token.
@@ -53,7 +55,7 @@ def main() -> None:
   conv_handler = ConversationHandler(
     entry_points=[CommandHandler("start", start_command), CommandHandler("attempt", attempt_command)],
     states={
-      BEGIN: [MessageHandler(filters.Regex("^(Начать | да | Да)$"), begin_command)],
+      BEGIN: [MessageHandler(filters.Regex("^(Начать|да|Да)$"), begin_command)],
       **questions_states(),
     },
     fallbacks=[
