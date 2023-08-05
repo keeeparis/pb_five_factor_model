@@ -237,8 +237,7 @@ async def fallback_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 
 async def cancel_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:  
   await update.message.reply_text(
-    "Вы прервали тест. Ну что ж, возвращайтесь скорее. \
-    Для прохождения теста нажмите /attempt",
+    "Вы прервали тест. Ну что ж, возвращайтесь скорее. Для прохождения теста нажмите /attempt",
     reply_markup=ReplyKeyboardRemove()
   )
   return ConversationHandler.END
@@ -259,5 +258,5 @@ async def description_command(update: Update, context: ContextTypes.DEFAULT_TYPE
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
   await update.message.reply_text(
-    "/start - Начать тест\n/attempt - Начать теста\n/cancel - Прервать тест\n/description - Описание теста\n/help - Помощь" 
+    "/start - Начать тест\n/attempt - Начать тест\n/cancel - Прервать тест\n/description - Описание теста\n/help - Помощь" 
   )
