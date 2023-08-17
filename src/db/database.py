@@ -20,7 +20,7 @@ class User(BaseModel):
   first_name = CharField()
   last_name = CharField(null=True)
   chat_id = BigIntegerField()
-  reg_date = DateField()
+  reg_date = DateTimeField()
   
   class Meta: 
     table_name = 'User'
@@ -32,7 +32,7 @@ class Test(BaseModel):
   agr_result = FloatField()
   csn_result = FloatField()
   opn_result = FloatField()
-  date = DateField()
+  date = DateTimeField()
   
   class Meta:
     table_name = 'Test'
