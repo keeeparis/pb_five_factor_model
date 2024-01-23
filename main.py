@@ -68,7 +68,7 @@ def main() -> None:
   application.add_handler(conv_handler)
   application.add_handler(CommandHandler("description", description_command))
   application.add_handler(CommandHandler("help", help_command))
-  application.add_handler(CommandHandler("list", bots_command))
+  application.add_handler(CommandHandler("bots", bots_command))
     
   # Start Bot
   application.run_polling(allowed_updates=Update.ALL_TYPES)
