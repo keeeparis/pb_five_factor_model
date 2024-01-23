@@ -262,7 +262,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
     "/start - Начать тест\n/attempt - Начать тест\n/cancel - Прервать тест\n/description - Описание теста\n/list - Список ботов\n/help - Помощь" 
   )
 
-async def list_command(update: Update, contex: ContextTypes.DEFAULT_TYPE) -> int:
+async def bots_command(update: Update, contex: ContextTypes.DEFAULT_TYPE) -> int:
   list_of_bots = """1. <b>Бросаться снежками</b> - @throw_snowball_bot\n2. <b>Сколько сантиметров?</b> - @pe_size_bot\n3. <b>Last.FM bot</b> - @lastfm_tgbot\n\nПо интересующим вопросам, @keeeparis"""
 
   return await update.message.reply_text(
