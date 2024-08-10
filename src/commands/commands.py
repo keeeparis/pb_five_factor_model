@@ -185,7 +185,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> i
   context.user_data['generator'] = generator(ALL_SORTED_QUESTIONS)
   
   await update.message.reply_text(
-    "Начать выполнение теста?", 
+    "Начать выполнение теста? (50 вопросов)", 
     reply_markup=start_markup)
   
   return BEGIN
@@ -207,7 +207,7 @@ async def attempt_command(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
   context.user_data['generator'] = generator(ALL_SORTED_QUESTIONS) 
   
   await update.message.reply_text(
-    "Начать выполнение теста?", 
+    "Начать выполнение теста? (50 вопросов)", 
     reply_markup=start_markup)
   
   return BEGIN
@@ -238,7 +238,7 @@ async def fallback_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 
 async def cancel_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:  
   await update.message.reply_text(
-    "Вы прервали тест. Ну что ж, возвращайтесь скорее. Для прохождения теста нажмите /attempt",
+    "Вы прервали тест. Ну что ж, возвращайтесь скорее. Для прохождения теста нажмите /attempt. В случае возникновения ошибок пишите @keeeparis",
     reply_markup=ReplyKeyboardRemove()
   )
   return ConversationHandler.END
